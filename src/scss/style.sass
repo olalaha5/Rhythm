@@ -1,0 +1,755 @@
+@import fonts.sass
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap')
+
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    border: none
+    box-sizing: border-box
+
+html,body
+    height: 100%
+    min-width: 320px
+
+body
+    font-family: Poppins,sans-serif // менять
+    line-height: 1rem
+    color: #666666 // менять
+
+a
+    text-decoration: none
+
+img
+    vertical-align: bottom
+
+li
+    list-style: none
+
+button
+    background: #fff
+
+.wrapper
+    display: flex
+    overflow: hidden
+    flex-direction: column
+
+.main
+    flex: 1 1 auto
+
+[class*="__container"]
+    max-width: 1230px // можно поменять
+    margin: 0 auto
+    padding: 0px 15px
+
+/* код выше не удалять */
+
+.header
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 10
+    &__container
+
+    &__menu
+        display: flex
+        justify-content: space-between
+        height: 152px // высота шапки
+        align-items: center
+
+.menu
+    max-width: 54%
+    &__icon-link
+        margin-right: 30px
+        transition: 0.3s
+        &:hover
+            transform: scale(1.05)
+
+    &__icon
+        position: relative
+        z-index: 5
+        width: 123px
+    &__body
+        max-width: 525px-56px
+        width: 100%
+        // margin-right: 28px
+        display: flex
+        justify-content: center
+
+    &__list
+        max-width: 309px
+        display: flex
+        position: relative
+        z-index: 5
+        gap: 20px
+        justify-content: space-between
+        width: 100%
+
+    &__item
+        // margin: 0px 0px 0px 20px // отступ между ссылками
+    &__link
+        font-style: normal
+        font-weight: 500
+        font-size: 1rem
+        line-height: 1.5rem
+        color: rgba(18, 18, 18, 0.4)
+        position: relative
+        &::after
+            display: block
+            content: ''
+            position: absolute
+            bottom: 1px
+            left: 0
+            width: 0
+            height: 2px
+            background-color: #FF6428
+            transition: 0.5s
+        &:hover::after
+            width: 100%
+
+    @media (max-width: 767px)
+        height: 80px // малая высота шапки
+        max-width: 100%
+    @media (max-width: 430px)
+        &__icon-link
+            min-width: 28px
+            width: 28px
+            overflow: hidden
+
+.browse
+
+    &__container
+        position: relative
+    &__content
+        padding: 19.58% 0px 0px 0px
+        max-width: 469px
+        display: flex
+        flex-direction: column
+        gap: 25px
+    &__decor
+        position: absolute
+        right: -120px
+        top: 0
+        max-width: 56%
+        min-width: 430px
+        img
+            width: 100%
+            border-radius: 0px 0px 151px 360px
+        &::before
+            content: ''
+            width: 80px
+            height: 80px
+            background-image: url(../img/icon-logo.svg)
+            position: absolute
+            bottom: 0
+            right: 42.26%
+            transform: translate(50%,50%)
+    &__title
+        font-family: 'CalSans',sans-serif
+        font-weight: 600
+        font-size: 3.5rem
+        line-height: 4.1875rem
+        color: #121212
+        &_orange
+            color: #FF6428
+    &__text
+        font-weight: 500
+        font-size: 1rem
+        line-height: 1.5rem
+        color: #666666
+    &__row
+        display: flex
+        align-items: center
+        gap: 40px
+    &__button
+        width: 192px
+        height: 60px
+        background: #FF6428
+        border-radius: 40px
+        font-weight: 600
+        font-size: 1rem
+        line-height: 1.5rem
+        color: #FFFFFF
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: 0.3s
+        &:hover
+            font-size: 1.05rem
+    &__icons
+        transition: 0.3s
+        display: flex
+        gap: 28px
+        align-items: center
+        *
+            transition: 0.3s
+
+        *:hover
+            transform: translate(0,-10%)
+
+    &__google-play
+
+    &__app-store
+    @media (max-width: 1024px)
+        &__decor
+            top: -120px
+
+    @media (max-width: 767px)
+        &__decor
+            display: none
+
+        &__content
+            padding: 80px 0px 100px 0px
+            max-width: none
+            text-align: center
+            align-items: center
+    @media (max-width: 430px)
+        &__content
+            padding: 19.58% 0px 50px 0px
+        &__title
+            font-size: 2.5rem
+            line-height: 3rem
+        &__row
+            flex-direction: column
+            gap: 15px
+            width: 100%
+        &__button
+            width: 100%
+
+.store
+
+    &__container
+        display: grid
+        padding-top: 120px
+    &__title
+        margin-bottom: 86px
+    &__text
+        font-style: normal
+        font-weight: 600
+        font-size: 1.25rem
+        line-height: 1.875rem
+        letter-spacing: 0.08rem
+        color: #121212
+        text-align: center
+    &__content
+        width: 100%
+
+    &__row
+        display: flex
+        justify-content: space-between
+        width: 100%
+        align-items: center
+        margin-bottom: 32px
+    &__view-all
+        font-weight: 500
+        font-size: 1.25rem
+        line-height: 1.875rem
+        color: #868686
+        position: relative
+        &::after
+            display: block
+            content: ''
+            position: absolute
+            bottom: 1px
+            left: 0
+            width: 0
+            height: 2px
+            background-color: #FF6428
+            transition: 0.5s
+        &:hover::after
+            width: 100%
+    &__grid
+        display: grid
+        grid-template-columns: repeat(auto-fill,minmax(364px,1fr))
+        justify-items: center
+        grid-gap: 40px
+    @media (max-width: 767px)
+        &__container
+            padding-top: 0px
+        &__title
+            margin-bottom: 40px
+    @media (max-width: 430px)
+        &__grid
+            grid-template-columns: repeat(auto-fill,minmax(280px,1fr))
+        &__text
+            font-size: 1.1rem
+        &__view-all
+            font-size: 1.1rem
+.card
+    max-width: 364px
+    &__img
+        margin-bottom: 40px
+        display: block
+        img
+            width: 100%
+            transition: 0.3s
+            &:hover
+                transform: scale(1.05)
+    &__name
+        display: inline-block
+        font-style: normal
+        font-weight: 500
+        font-size: 1rem
+        line-height: 1.5rem
+        color: #121212
+        margin-bottom: 7px
+        transition: 0.2s
+        &:hover
+            transform: scale(1.05)
+    &__price
+        font-size: 0.875rem
+        line-height: 1.3125rem
+        color: #666666
+
+    @media (max-width: 430px)
+        &__img
+            margin-bottom: 0
+
+.title
+    font-family: 'CalSans',sans-serif
+    font-weight: 600
+    font-size: 2.75rem
+    line-height: 3.3125rem
+    color: #121212
+    text-align: center
+    &_orange
+        color: #FF6428
+    @media (max-width: 430px)
+        font-size: 2rem
+        line-height: 2.5rem
+
+.catigories
+    &__container
+        padding-top: 180px
+
+    &__title
+        margin-bottom: 80px
+
+    &__content
+        padding: 20px
+        display: grid
+        grid-template-columns: repeat(4, 220px)
+        justify-items: center
+        grid-gap: 70px
+        justify-content: center
+
+        @media (max-width: 1230px)
+            grid-gap: 30px
+            grid-template-columns: repeat(4, 1fr)
+        @media (max-width: 767px)
+            grid-template-columns: repeat(2, 1fr)
+        @media (max-width: 424px)
+            grid-template-columns: repeat(1, 1fr)
+    @media (max-width: 767px)
+        &__container
+            padding-top: 70px
+        &__title
+            margin-bottom: 30px
+
+.card-catigories
+    display: block
+    position: relative
+    overflow: hidden
+    border-radius: 20px
+    width: 100%
+
+    &__img
+        display: block
+        width: 100%
+        vertical-align: bottom
+        transition: 0.3s
+        &:hover
+            transform: scale(1.05)
+        img
+            width: 100%
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%)
+
+    &__text
+        position: absolute
+        bottom: 30px
+        left: 50%
+        transform: translate(-50%,0)
+        font-weight: 600
+        font-size: 1.25rem
+        line-height: 1.875rem
+        color: #FFFFFF
+
+.best-brands
+
+    &__container
+        padding-top: 220px
+        padding-bottom: 180px
+    &__title
+        margin-bottom: 75px
+    &__content
+        padding: 0 80px
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        align-items: center
+        justify-items: center
+        grid-column-gap: 160px
+        grid-gap: 80px 160px
+        @media (max-width: 1230px)
+            grid-gap: 30px
+            grid-template-columns: repeat(4, 1fr)
+        @media (max-width: 850px)
+            grid-template-columns: repeat(2, 1fr)
+        @media (max-width: 550px)
+            grid-template-columns: repeat(1, 1fr)
+            grid-gap: 15px
+    @media (max-width: 767px)
+        &__container
+            padding-top: 80px
+            padding-bottom: 80px
+        &__title
+            margin-bottom: 30px
+
+.why-try
+    background-color: #121212
+    &__container
+        padding: 93px 47px
+    &__title
+        color: #fff
+        margin-bottom: 75px
+    &__content
+        display: flex
+        justify-content: space-around
+    &__item
+        display: grid
+        justify-items: center
+        max-width: 205px
+    &__icon
+        background: #262626
+        border-radius: 20px
+        width: 72px
+        height: 72px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 40px
+
+    &__reason
+        font-weight: 600
+        font-size: 1.125rem
+        line-height: 1.6875rem
+        letter-spacing: 0.08em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 12px
+    &__text
+        font-size: 0.875rem
+        line-height: 1.3125rem
+        text-align: center
+        text-transform: capitalize
+    @media (max-width: 767px)
+        &__container
+            padding: 60px 0px
+        &__content
+            flex-direction: column
+            align-items: center
+            gap: 30px
+        &__icon
+            margin-bottom: 20px
+        &__reason
+            margin-bottom: 8px
+
+.our-customer
+    padding-top: 240px
+    &__title
+        margin-bottom: 109px
+
+    &__content
+
+    &__slider
+
+    &__slider-items
+        display: flex
+        transition: 0.5s
+        align-items: flex-start
+    &__slider-buttons
+        display: flex
+        grid-row: 3
+        padding: 0 14px
+        gap: 8px
+        align-items: center
+        height: 16px
+        max-width: 1230px
+        padding: 0 40px
+        margin: 0 auto
+        justify-content: flex-end
+        position: relative
+        top: -30px
+
+    &__slider-button
+        background-color: #C4C4C4
+        width: 10px
+        height: 16px
+        border-radius: 20px
+        transition: 0.3s
+        cursor: pointer
+        &_active
+            background: #FF6428
+            width: 30px
+            height: 16px
+        &:hover
+            background: #ffab8c
+    @media (max-width: 1023px)
+        &__slider-buttons
+            top: -63px
+
+.item
+    min-width: 100vw
+    overflow: hidden
+    &__container
+        display: flex
+        align-items: center
+    &__image-wrapper
+        flex: 0 1 50%
+        display: flex
+        justify-content: flex-end
+        padding-right: 96px
+    &__image
+        position: relative
+        img
+            border-radius: 200px
+        &::before
+            content: ''
+            position: absolute
+            width: 87.42%
+            height: 75.66%
+            background: #FF6428
+            border-radius: 40px 0px 400px 400px
+            transform: rotate(-7.72deg)
+            z-index: -1
+            left: -65px
+            top: 56px
+
+    &__text
+        font-size: 1.5rem
+        line-height: 2.375rem
+        flex: 0 1 50%
+        padding: 0px 26px 0px 50px
+        display: grid
+        align-content: center
+        grid-auto-columns: 1fr auto
+    &__speech
+        margin-bottom: 56px
+        grid-row: 1
+        grid-column: 1 / 3
+    &__row
+        width: 100%
+    &__name
+        font-weight: 600
+        color: #000000
+        margin-bottom: 8px
+        grid-row: 2
+        grid-column: 1 / 3
+
+    &__prof
+        font-weight: 500
+        font-size: 1.125rem
+        line-height: 1.8125rem
+        letter-spacing: 0.08em
+        color: #868686
+        grid-row: 3
+    @media (max-width: 1023px)
+        &__container
+            flex-direction: column
+        &__image-wrapper
+            padding: 0
+            margin-bottom: 20px
+
+        &__text
+            padding: 0px 0px 0px 0px
+    @media (max-width: 424px)
+        img
+            width: 280px
+            &::before
+
+.app
+
+    &__container
+        display: flex
+        align-items: center
+        padding-top: 220px
+        padding-bottom: 182px
+    &__content
+        flex: 0 1 50%
+
+    &__text
+        text-align: left
+        font-size: 3rem
+        line-height: 4.1875rem
+        max-width: 484px
+        margin-bottom: 60px
+    &__buttons
+        display: flex
+        gap: 26px
+        width: 100%
+    &__button
+        display: inline-block
+        max-width: 193px
+        transition: 0.3s
+        img
+            width: 100%
+        &:hover
+            transform: scale(1.05)
+    &__decor
+        flex: 0 1 50%
+        padding: 0 15px
+        img
+            width: 100%
+    @media (max-width: 767px)
+        &__container
+            flex-direction: column
+            padding-top: 80px
+            padding-bottom: 60px
+
+        &__content
+            display: flex
+            flex-wrap: wrap
+        &__text
+            max-width: none
+            flex: 0 0 100%
+            margin-bottom: 20px
+            font-size: 2rem
+            line-height: 3rem
+
+        &__decor
+            margin-top: 20px
+
+.footer
+    background: #EEEEEE
+    &__container
+        padding-top: 80px
+        padding-bottom: 43px
+    &__content
+        display: grid
+        grid-template-columns: 2.3fr 1fr 1fr 1fr
+        ul
+            display: inline-block
+    &__logo
+        line-height: 1.625rem
+        &>li:first-child
+            img
+                width: 202px
+                margin-bottom: 28px
+                transition: 0.2s
+                &:hover
+                    transform: scale(1.05)
+        &>.footer__text:not(:first-child)
+
+            img
+                margin-right: 20px
+
+        li:nth-child(2)
+            margin-bottom: 20px
+
+    &__pages
+        line-height: 1.5rem
+        color: rgba(18, 18, 18, 0.6)
+        li:not(:last-child)
+            margin-bottom: 16px
+        li:first-child
+            margin-bottom: 20px
+        .footer__text
+            display: inline-block
+            position: relative
+            &::after
+                display: block
+                content: ''
+                position: absolute
+                bottom: 1px
+                left: 0
+                width: 0
+                height: 2px
+                background-color: #FF6428
+                transition: 0.5s
+            &:hover::after
+                width: 100%
+
+    &__product
+        line-height: 1.5rem
+        color: rgba(18, 18, 18, 0.6)
+        li:not(:last-child)
+            margin-bottom: 16px
+        li:first-child
+            margin-bottom: 20px
+        .footer__text
+            display: inline-block
+            position: relative
+            &::after
+                display: block
+                content: ''
+                position: absolute
+                bottom: 1px
+                left: 0
+                width: 0
+                height: 2px
+                background-color: #FF6428
+                transition: 0.5s
+            &:hover::after
+                width: 100%
+    &__follow-us
+        &>.footer__text
+            display: flex
+            max-width: 160px
+            justify-content: space-between
+            img
+                transition: 0.2s
+
+                &:hover
+                    transform: scale(1.1)
+    &__copyright
+        line-height: 1.625rem
+        color: rgba(18, 18, 18, 0.6)
+        margin-top: 80px
+        text-align: center
+    @media (max-width: 767px)
+        &__content
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 1fr 1fr
+            grid-row-gap: 30px
+        &__logo
+            grid-column: 1/4
+        &__copyright
+            margin-top: 30px
+    @media (max-width: 424px)
+        &__container
+            padding-top: 40px
+        &__content
+            grid-template-columns: 1fr
+            grid-template-rows: auto auto auto auto
+            grid-row-gap: 30px
+        &__logo
+            grid-column: 1
+        &__pages
+            li:not(:last-child)
+                margin-bottom: 5px
+            li:first-child
+                margin-bottom: 10px
+        &__product
+            li:not(:last-child)
+                margin-bottom: 5px
+            li:first-child
+                margin-bottom: 10px
+
+.list
+
+    &__title
+        font-weight: 600
+        font-size: 1.125rem
+        line-height: 1.6875rem
+        text-transform: uppercase
+        color: #121212
+        margin-bottom: 20px
+        &_end
+            margin-bottom: 12px

@@ -1,0 +1,248 @@
+extends html/layout.pug
+        
+block head 
+    //- сдесь можно добавить код к тегу head(должен быть отступ)
+    title Rhythm
+    <meta name="description" content="Добавьте свое описание.">
+    //--------------------------------------
+
+block content
+    //- сдесь можно добавить код к тегу body(должен быть отступ)
+    .wrapper 
+        header.header
+            .header__container
+                .header__menu.menu
+                    a(href='/').menu__icon-link
+                        img(src='img/LOGO.svg', alt='LOGO').menu__icon
+                    nav.menu__body
+                        ul.menu__list
+                            li.menu__item 
+                                a(href='/').menu__link Store
+                            li.menu__item 
+                                a(href='/').menu__link Collections
+                            li.menu__item 
+                                a(href='/').menu__link Support
+        main.main 
+            section.browse
+                .browse__container 
+                    .browse__content 
+                        h1.browse__title Browse top quality #[span.browse__title_orange Guitars] online
+                        .browse__text Explore 50k+ latest collections of branded guitars online with Rhythm.
+                        .browse__row 
+                            a(href="#").browse__button Get the App
+                            .browse__icons
+                                a(href="#").browse__google-play
+                                    img(src="img/playMarket.svg", alt="play market")
+                                a(href="#").browse__app-store
+                                    img(src="img/AppleLogo.svg", alt="apple logo")
+                    .browse__decor 
+                        img(src="img/decor.png", alt="decor")
+            section.store 
+                .store__container  
+                    .store__title.title Check out the #[span.title_orange Store]
+                    .store__content 
+                        .store__row 
+                            .store__text NEW ON THE BOARD
+                            a(href="#").store__view-all view all
+                        .store__grid 
+                            .store__card.card 
+                                a(href="#").card__img
+                                    img(src="img/guitar1.png", alt="guitar").card__img
+                                a(href="#").card__name The Essential Les Paul
+                                .card__price $1,299.00
+                            .store__card.card 
+                                a(href="#").card__img
+                                    img(src="img/guitar2.png", alt="guitar").card__img
+                                a(href="#").card__name J-45 Standard
+                                .card__price $1,699.00
+                            .store__card.card 
+                                a(href="#").card__img
+                                    img(src="img/guitar3.png", alt="guitar").card__img
+                                a(href="#").card__name Hummingbird Standard
+                                .card__price $2,099.00
+                            .store__card.card 
+                                a(href="#").card__img
+                                    img(src="img/guitar4.png", alt="guitar").card__img
+                                a(href="#").card__name Active Precision Bass® PH V
+                                .card__price $4,199.00
+                            .store__card.card 
+                                a(href="#").card__img
+                                    img(src="img/guitar5.png", alt="guitar")
+                                a(href="#").card__name Redondo Special
+                                .card__price $2,800.00
+                            .store__card.card 
+                                a(href="#").card__img
+                                    img(src="img/guitar6.png", alt="guitar").card__img
+                                a(href="#").card__name Professional II Stratocaster®
+                                .card__price $3,199.00
+            section.catigories
+                .catigories__container 
+                    .catigories__title.title Choose based on #[span.title_orange Categories]
+                    .catigories__content 
+                        a(href="#").card-catigories
+                            .card-catigories__img
+                                img(src="img/background1.png", alt="background")
+                            .card-catigories__text Acoustic
+                        a(href="#").card-catigories
+                            .card-catigories__img
+                                img(src="img/background2.png", alt="background")
+                            .card-catigories__text Electric
+                        a(href="#").card-catigories
+                            .card-catigories__img
+                                img(src="img/background3.png", alt="background")
+                            .card-catigories__text Basses
+                        a(href="#").card-catigories
+                            .card-catigories__img
+                                img(src="img/background4.png", alt="background")
+                            .card-catigories__text Collections
+            section.best-brands
+                .best-brands__container 
+                    .best-brands__title.title Featuring the #[span.title_orange Best Brands]
+                    .best-brands__content 
+                        .best-brands__logo 
+                            img(src="img/logo1.png", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo2.png", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo3.png", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo4.png", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo5.svg", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo6.svg", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo7.svg", alt="brand's logo")
+                        .best-brands__logo 
+                            img(src="img/logo8.svg", alt="brand's logo")
+            section.why-try
+                .why-try__container
+                    .why-try__title.title Why try #[span.title_orange Rhythm?]
+                    .why-try__content 
+                        .why-try__item  
+                            .why-try__icon 
+                                img(src="img/figures.svg", alt="figures")
+                            .why-try__reason Smooth Browsing
+                            .why-try__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .why-try__item  
+                            .why-try__icon 
+                                img(src="img/delivery.svg", alt="delivery")
+                            .why-try__reason EASY Delivery 
+                            .why-try__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        .why-try__item  
+                            .why-try__icon 
+                                img(src="img/wallet.svg", alt="wallet")
+                            .why-try__reason SwiFT PAYMENTS
+                            .why-try__text Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            section.our-customer 
+                    .our-customer__title.title What our #[span.title_orange customer’s] say
+                    .our-customer__content
+                        .our-customer__slider 
+                            .our-customer__slider-items 
+                                .our-customer__slider-item.item 
+                                    .item__container
+                                        .item__image-wrapper
+                                            .item__image 
+                                                img(src="img/person.png", alt="person")
+                                        .item__text
+                                            .item__speech “The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.”
+                                            .item__name Ryan Wels
+                                            .item__prof PROFESSIONAL GUITARIST
+                                .our-customer__slider-item.item 
+                                    .item__container
+                                        .item__image-wrapper
+                                            .item__image 
+                                                img(src="img/person.png", alt="person")
+                                        .item__text
+                                            .item__speech “The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.”
+                                            .item__name Ryan Wels
+                                            .item__prof PROFESSIONAL GUITARIST
+                                .our-customer__slider-item.item 
+                                    .item__container
+                                        .item__image-wrapper
+                                            .item__image 
+                                                img(src="img/person.png", alt="person")
+                                        .item__text
+                                            .item__speech “The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.”
+                                            .item__name Ryan Wels
+                                            .item__prof PROFESSIONAL GUITARIST
+                                .our-customer__slider-item.item 
+                                    .item__container
+                                        .item__image-wrapper
+                                            .item__image 
+                                                img(src="img/person.png", alt="person")
+                                        .item__text
+                                            .item__speech “The Quality and Delivery is always on time, being a professional guitarist myself I love the customer service the brand provides, highly recommend Rhythm anytime.”
+                                            .item__name Ryan Wels
+                                            .item__prof PROFESSIONAL GUITARIST
+                            .our-customer__slider-buttons
+                                            .our-customer__slider-button.our-customer__slider-button_active
+                                            .our-customer__slider-button
+                                            .our-customer__slider-button
+                                            .our-customer__slider-button
+            section.app 
+                .app__container 
+                    .app__content 
+                        .app__text.title Browse and buy your  #[span.title_orange favorite guitars] with Rhythm.
+                        .app__buttons
+                            .app__button
+                                img(src="img/GooglePlay.png", alt="Google Play")
+                            .app__button 
+                                img(src="img/appStore.png", alt="app store")
+                    .app__decor 
+                        img(src="img/app.png", alt="app")
+            footer.footer
+                .footer__container 
+                    .footer__content
+                        ul.footer__logo 
+                            li
+                                a(href="#") 
+                                    img(src="img/logo.svg", alt="logo")
+                            li.footer__text 
+                                img(src="img/sms.svg", alt="sms")
+                                | Enquiry@Rhythm.com
+                            li.footer__text  
+                                img(src="img/location.svg", alt="sms")
+                                | San Francisco
+                        ul.footer__pages.list
+                            li
+                                a(href="#") 
+                                    .list__title Pages
+                            li
+                                a(href="#") 
+                                    .footer__text Store
+                            li
+                                a(href="#") 
+                                    .footer__text Collections
+                            li
+                                a(href="#") 
+                                    .footer__text Support
+                        ul.footer__product.list
+                            li.list__title Product
+                            li
+                                a(href="#") 
+                                    .footer__text Terms
+                            li
+                                a(href="#") 
+                                    .footer__text Privacy Policy
+                            li
+                                a(href="#") 
+                                    .footer__text Copyright
+                        ul.footer__follow-us.list
+                            li.list__title.list__title_end Follow us
+                            li.footer__text
+                                a(href="#") 
+                                    img(src="img/facebook.svg", alt="facebook")
+                                a(href="#") 
+                                    img(src="img/twitter.svg", alt="twitter")
+                                a(href="#") 
+                                    img(src="img/Instagram.svg", alt="Instagram")
+                    .footer__copyright © 2022 Copyright.Rhythm
+            
+
+
+
+            
+
+    //--------------------------------------
+        
