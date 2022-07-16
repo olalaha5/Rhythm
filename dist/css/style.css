@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;
-
-500;600&display=swap");
 @font-face {
   font-family: "CalSans";
   font-display: swap;
@@ -784,6 +781,7 @@ button {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .app__button img {
@@ -869,6 +867,7 @@ button {
 .footer__pages .footer__text {
   display: inline-block;
   position: relative;
+  color: rgba(18, 18, 18, 0.6);
 }
 
 .footer__pages .footer__text::after {
@@ -904,6 +903,7 @@ button {
 
 .footer__product .footer__text {
   display: inline-block;
+  color: rgba(18, 18, 18, 0.6);
   position: relative;
 }
 
