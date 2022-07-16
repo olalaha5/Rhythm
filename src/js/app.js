@@ -1,5 +1,5 @@
-/**/import * as flsFunctions from "./modules/webpChecker.js";
-/**/flsFunctions.isWebp()
+import * as flsFunctions from "./modules/webpChecker.js";
+flsFunctions.isWebp()
 /* код выше не удалять */
 
 
@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function height(i) {
         items.style.height = `${item[i].clientHeight}px`;
-        console.log(item[i])
     };
     height(0)
 
